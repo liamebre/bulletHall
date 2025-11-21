@@ -1,6 +1,9 @@
 extends Node2D
-@export var start_scene : PackedScene
+@export var scene_manager : PackedScene
 
 func _ready() -> void:
-	var startMenu =  start_scene.instantiate()
-	add_child(startMenu)
+	var sceneManager = scene_manager.instantiate()
+	add_child(sceneManager)
+
+func _process(_delta: float) -> void:
+	pass

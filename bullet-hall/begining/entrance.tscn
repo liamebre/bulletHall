@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b6g1pcq7torfi" path="res://begining/entrance.gd" id="1_tkouy"]
 [ext_resource type="Texture2D" uid="uid://wci46iwdgap7" path="res://assets/kenney_tiny-dungeon/Tilemap/tilemap_packed.png" id="2_k7qwl"]
-[ext_resource type="PackedScene" uid="uid://5u6qbhnhtgxq" path="res://player.tscn" id="3_s3ynn"]
+[ext_resource type="PackedScene" uid="uid://5u6qbhnhtgxq" path="res://character/player.tscn" id="3_s3ynn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3ynn"]
 size = Vector2(32, 21)

@@ -16,7 +16,7 @@ func changeScene(x) -> void:
 		1:
 			var entrance = entrance_scene.instantiate()
 			entrance.connect("swapscene",changeScene)
-			add_child(entrance)
+			call_deferred("add_child",entrance)
 		2:
 			var hall = hallOne_scene.instantiate()
 			hall.connect("swapscene",changeScene)

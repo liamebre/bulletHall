@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1v3evdf61in8"]
+
+[ext_resource type="Script" uid="uid://c3xjbbo46yk2d" path="res://start_menu.gd" id="1_gqihx"]
+[ext_resource type="Texture2D" uid="uid://33a8fjqt0ys" path="res://titleBulletHall.png" id="2_1ydhs"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_gqihx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.8039216, 0.13725491, 0.16470589, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+size_flags_vertical = 2
+text = "ENTER HELL"
+
+[node name="TitleBulletHall" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(576.49994, 202.50002)
+scale = Vector2(3.843333, 2.045)
+texture = ExtResource("2_1ydhs")
+
+[connection signal="button_down" from="VBoxContainer/Button" to="." method="_on_button_button_down"]

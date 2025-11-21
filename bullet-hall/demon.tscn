@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccmygme224tx1"]
+
+[ext_resource type="Texture2D" uid="uid://d35ir5hcn65w7" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0084.png" id="1_dv6x7"]
+
+[node name="demon" type="Node2D"]
+
+[node name="demonSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_dv6x7")

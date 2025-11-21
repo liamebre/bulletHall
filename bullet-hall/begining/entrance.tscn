@@ -171,10 +171,10 @@ position = Vector2(192, 7.5)
 shape = SubResource("RectangleShape2D_s3ynn")
 
 [node name="background" type="ColorRect" parent="."]
-offset_left = -187.0
-offset_top = -112.0
-offset_right = 583.0
-offset_bottom = 449.0
+offset_left = -342.0
+offset_top = -268.0
+offset_right = 758.0
+offset_bottom = 555.0
 color = Color(0.16924527, 0.1692453, 0.16924527, 1)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]

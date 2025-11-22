@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b7nmw1hoiorb5" path="res://fireball.gd" id="1_sf4mh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wi6of"]
+radius = 9.0
 
 [node name="fireball" type="RigidBody2D"]
 gravity_scale = 0.0
@@ -19,4 +20,4 @@ offset_right = 7.0
 offset_bottom = 6.0
 color = Color(1, 0, 0, 1)
 
-[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

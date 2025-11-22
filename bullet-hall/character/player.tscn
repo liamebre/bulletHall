@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
 radius = 8.0
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_monf5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -12,6 +12,7 @@ func _ready() -> void:
 	call_deferred("add_child",player)
 	
 	demon = demon_scene.instantiate()
+	demon.connect("hit",damageplayer)
 	demon.setPos(Vector2i(160,60))
 	call_deferred("add_child",demon)
 
@@ -19,3 +20,8 @@ func _on_area_2d_body_shape_entered(_body_rid: RID, _body: Node2D, _body_shape_i
 	if _body == player:
 		emit_signal("swapscene",3)
 		queue_free()
+
+func damageplayer():
+	player.health -= 1
+	if player.health == 0:
+		emit_signal("swapscene",4)

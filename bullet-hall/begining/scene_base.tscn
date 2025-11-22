@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dya155pgrrqhe"]
+[gd_scene load_steps=7 format=3 uid="uid://dya155pgrrqhe"]
 
-[ext_resource type="Script" uid="uid://d063ard8ed0o7" path="res://scene_base.gd" id="1_e85jc"]
+[ext_resource type="Script" uid="uid://d063ard8ed0o7" path="res://begining/scene_base.gd" id="1_e85jc"]
 [ext_resource type="PackedScene" uid="uid://d1v3evdf61in8" path="res://begining/startMenu.tscn" id="2_n73sf"]
 [ext_resource type="PackedScene" uid="uid://dlw8o1y2qku7a" path="res://begining/entrance.tscn" id="3_jkeq8"]
 [ext_resource type="PackedScene" uid="uid://cujawveuobq7u" path="res://halls/hall_one.tscn" id="4_jkeq8"]
 [ext_resource type="PackedScene" uid="uid://cyscbb45fbxya" path="res://halls/safe_room.tscn" id="4_unun3"]
+[ext_resource type="PackedScene" uid="uid://cc4s3vcy0ytlw" path="res://halls/game_over.tscn" id="6_y04iy"]
 
 [node name="sceneBase" type="Node2D"]
 script = ExtResource("1_e85jc")
@@ -12,6 +13,7 @@ start_scene = ExtResource("2_n73sf")
 entrance_scene = ExtResource("3_jkeq8")
 safeRoom_scene = ExtResource("4_unun3")
 hallOne_scene = ExtResource("4_jkeq8")
+gameOver_scene = ExtResource("6_y04iy")
 
 [node name="Control" parent="." instance=ExtResource("2_n73sf")]
 visible = false

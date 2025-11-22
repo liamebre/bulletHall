@@ -1,6 +1,7 @@
 extends CharacterBody2D
 var speed = 100
 var health = 1 
+var score = 0 
 
 func setPos(x):
 	position = x
@@ -8,6 +9,7 @@ func setPos(x):
 func _process(delta: float) -> void:
 	get_input()
 	move_and_collide(velocity * delta)
+	
 
 func get_input():
 	var input_dir = Input.get_vector("left","right","up","down")

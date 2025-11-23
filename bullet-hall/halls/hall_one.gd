@@ -25,3 +25,4 @@ func damageplayer():
 	player.health -= 1
 	if player.health == 0:
 		emit_signal("swapscene",4)
+		queue_free()

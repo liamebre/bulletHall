@@ -7,6 +7,8 @@ class_name sceneBase
 @export var hallOne_scene : PackedScene
 @export var gameOver_scene : PackedScene
 
+var score = 0
+
 
 func _ready() -> void:
 	var startMenu = start_scene.instantiate()
@@ -28,7 +30,10 @@ func changeScene(x) -> void:
 			var saferoom = safeRoom_scene.instantiate()
 			saferoom.connect("swapscene",changeScene)
 			call_deferred("add_child",saferoom)
+			score += 1 
 		4:
 			var rip = gameOver_scene.instantiate()
 			rip.connect("swapscene",changeScene)
+			rip.getScore(score)
+			score = 0
 			call_deferred("add_child",rip)

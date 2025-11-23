@@ -4,6 +4,7 @@ extends Node2D
 
 var player
 var demon
+var score
 signal swapscene
 
 func _ready() -> void:
@@ -13,7 +14,8 @@ func _ready() -> void:
 	
 	demon = demon_scene.instantiate()
 	demon.connect("hit",damageplayer)
-	demon.setPos(Vector2i(160,60))
+	demon.setPos(Vector2i(160,85))
+	demon.getScore(score)
 	call_deferred("add_child",demon)
 
 func _on_area_2d_body_shape_entered(_body_rid: RID, _body: Node2D, _body_shape_index: int, _local_shape_index: int) -> void:
@@ -26,3 +28,6 @@ func damageplayer():
 	if player.health == 0:
 		emit_signal("swapscene",4)
 		queue_free()
+		
+func getScore(x):
+	score = x

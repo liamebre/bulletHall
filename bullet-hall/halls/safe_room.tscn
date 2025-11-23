@@ -178,8 +178,10 @@ tile_map_data = PackedByteArray("AAAFAAEAAQACAAIAAAAFAAIAAQAAAAAAAAAFAAMAAQAAAAA
 tile_set = SubResource("TileSet_w73ab")
 
 [node name="ColorRect2" type="ColorRect" parent="."]
-offset_right = 239.0
-offset_bottom = 160.0
+offset_left = -278.0
+offset_top = -301.0
+offset_right = 558.0
+offset_bottom = 383.0
 color = Color(1, 0.27450982, 0.29411766, 0.27058825)
 
 [node name="Area2D" type="Area2D" parent="."]

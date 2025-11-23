@@ -10,7 +10,7 @@ func _ready() -> void:
 	$".".set_contact_monitor(true)
 	
 func _process(_delta: float) -> void:
-	if position.y >= 550 or position.y <-15 or position.x < -115 or position.x > 115:
+	if position.y >= 530 or position.y <-10 or position.x < -115 or position.x > 115:
 		queue_free()
 	
 

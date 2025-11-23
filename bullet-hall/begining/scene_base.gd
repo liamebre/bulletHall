@@ -18,13 +18,10 @@ func _ready() -> void:
 
 func changeScene(x) -> void:
 	match x:
-		1:
-			var entrance = entrance_scene.instantiate()
-			entrance.connect("swapscene",changeScene)
-			call_deferred("add_child",entrance)
 		2:
 			var hall = hallOne_scene.instantiate()
 			hall.connect("swapscene",changeScene)
+			hall.getScore(score)
 			call_deferred("add_child",hall)
 		3:
 			var saferoom = safeRoom_scene.instantiate()

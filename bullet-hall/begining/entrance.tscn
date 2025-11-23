@@ -1,8 +1,25 @@
-[gd_scene load_steps=7 format=4 uid="uid://dlw8o1y2qku7a"]
+[gd_scene load_steps=7 format=4 uid="uid://bgromkqq5nods"]
 
-[ext_resource type="Script" uid="uid://b6g1pcq7torfi" path="res://begining/entrance.gd" id="1_tkouy"]
 [ext_resource type="Texture2D" uid="uid://wci46iwdgap7" path="res://assets/kenney_tiny-dungeon/Tilemap/tilemap_packed.png" id="2_k7qwl"]
 [ext_resource type="PackedScene" uid="uid://5u6qbhnhtgxq" path="res://character/player.tscn" id="3_s3ynn"]
+
+[sub_resource type="GDScript" id="GDScript_k7qwl"]
+script/source = "extends Node2D
+@export var player_scene : PackedScene
+var player
+signal swapscene
+
+func _ready() -> void:
+	player = player_scene.instantiate()
+	player.setPos(Vector2i(192,190))
+	call_deferred(\"add_child\",player)
+
+func _on_area_2d_body_shape_entered(_body_rid: RID, _body: Node2D, _body_shape_index: int, _local_shape_index: int) -> void:
+	if _body == player:
+		emit_signal(\"swapscene\",2)
+		queue_free()
+	
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3ynn"]
 size = Vector2(32, 21)
@@ -161,7 +178,7 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_s3ynn")
 
 [node name="entrance" type="Node2D"]
-script = ExtResource("1_tkouy")
+script = SubResource("GDScript_k7qwl")
 player_scene = ExtResource("3_s3ynn")
 
 [node name="Area2D" type="Area2D" parent="."]

@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvac87vmilbrl"]
+
+[ext_resource type="Script" uid="uid://c4in4ta314f2g" path="res://lore_page.gd" id="1_3lm7b"]
+
+[sub_resource type="Theme" id="Theme_p0wc7"]
+RichTextLabel/constants/outline_size = 2
+RichTextLabel/font_sizes/normal_font_size = 22
+
+[node name="lorePage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3lm7b")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 648.0
+color = Color(0.54509807, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 27.0
+offset_right = 1180.0
+offset_bottom = 337.0
+theme = SubResource("Theme_p0wc7")
+text = "WELCOME TO BULLET HALL:
+you have been tapped in a never ending hallway. The hallway is protected by a pyromanic wizard.
+if you do manage to make it past the wizard you will be greated by momentaty peace; as well as a choice.
+there will be a yellow box that give you a speed bost and
+there will be a dark red box that gives you and extra life.
+you are then required to enter the hallway again.
+ the wizard will be crazier than before
+YOUR GOAL: get as far as you can. THERE IS NO END!!
+BEST OF LUCK
+THE DEVIL<3."
+fit_content = true
+
+[node name="exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 575.0
+offset_right = 117.0
+offset_bottom = 631.0
+text = "exit"
+
+[connection signal="button_down" from="exit" to="." method="_on_exit_button_down"]

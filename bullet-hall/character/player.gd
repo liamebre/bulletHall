@@ -1,9 +1,12 @@
 extends CharacterBody2D
-var speed = 100
-var health = 1 
+@export var speed = 75
+@export var health = 1
 
-func setPos(x):
+
+func setPos(x,h,s):
 	position = x
+	health = h 
+	speed = s
 	
 func _process(delta: float) -> void:
 	get_input()
@@ -14,5 +17,7 @@ func _process(delta: float) -> void:
 func get_input():
 	var input_dir = Input.get_vector("left","right","up","down")
 	velocity = input_dir * speed
+
+	
 
 	

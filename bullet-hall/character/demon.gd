@@ -14,15 +14,13 @@ func _process(delta: float) -> void:
 	tt += delta
 
 func _on_shot_timer_timeout() -> void:
-
 	for i in score + 1:
-		var randx = randi_range(-40 - score*2,40 + score*2)
-		var randy = randi_range(100-score,140+score)
+		var randx = randi_range(-100,100)
 		var fireball = fireball_scene.instantiate()
 		fireball.connect("hit",playerhit)
-		direction = Vector2i(randx,randy)
+		direction = Vector2i(randx,130)
 		fireball.setDir(direction)
-		add_child(fireball)
+		call_deferred("add_child",fireball)
 
 func playerhit():
 	emit_signal("hit")

@@ -5,11 +5,15 @@ extends Node2D
 var player
 var demon
 var score
+var health
+var speed 
 signal swapscene
 
 func _ready() -> void:
 	player = player_scene.instantiate()
-	player.setPos(Vector2i(160,630))
+	player.setPos(Vector2i(160,630),health,speed)
+	print(player.speed)
+	print(player.health)
 	call_deferred("add_child",player)
 	
 	demon = demon_scene.instantiate()
@@ -29,5 +33,7 @@ func damageplayer():
 		emit_signal("swapscene",4)
 		queue_free()
 		
-func getScore(x):
+func getScore(x,h,s):
 	score = x
+	health = h
+	speed = s

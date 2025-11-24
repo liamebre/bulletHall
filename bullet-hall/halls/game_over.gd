@@ -4,7 +4,7 @@ signal swapscene
 var score
 
 func _ready() ->void:
-	$ColorRect/scoretext.text = "HIGHEST HALL REACHED = " + str(score)
+	$ColorRect/scoretext.text = "HIGHEST HALL REACHED " + str(score)
 
 func _on_quit_button_down() -> void:
 	get_tree().quit()

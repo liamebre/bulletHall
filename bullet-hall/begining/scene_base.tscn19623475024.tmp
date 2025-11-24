@@ -200,3 +200,5 @@ entrance_scene = SubResource("PackedScene_g64dy")
 safeRoom_scene = ExtResource("4_unun3")
 hallOne_scene = ExtResource("4_jkeq8")
 gameOver_scene = ExtResource("6_y04iy")
+
+[node name="player" parent="." instance=ExtResource("3_cnnge")]

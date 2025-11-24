@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://cyscbb45fbxya"]
+[gd_scene load_steps=9 format=4 uid="uid://cyscbb45fbxya"]
 
 [ext_resource type="Texture2D" uid="uid://wci46iwdgap7" path="res://assets/kenney_tiny-dungeon/Tilemap/tilemap_packed.png" id="1_545i4"]
 [ext_resource type="Script" uid="uid://twejb1d3psbk" path="res://halls/safe_room.gd" id="1_w73ab"]
 [ext_resource type="PackedScene" uid="uid://5u6qbhnhtgxq" path="res://character/player.tscn" id="2_m5rhy"]
+[ext_resource type="PackedScene" uid="uid://b4qextgva7yg8" path="res://lifeboost.tscn" id="3_lyq2o"]
+[ext_resource type="PackedScene" uid="uid://cvwfdksbbdhtw" path="res://speedboost.tscn" id="4_fefk5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_545i4"]
 texture = ExtResource("1_545i4")
@@ -163,6 +165,8 @@ size = Vector2(30, 16)
 [node name="safeRoom" type="Node2D"]
 script = ExtResource("1_w73ab")
 player_scene = ExtResource("2_m5rhy")
+lifeboost_scene = ExtResource("3_lyq2o")
+speedboost_scene = ExtResource("4_fefk5")
 metadata/_edit_horizontal_guides_ = [135.0]
 
 [node name="ColorRect" type="ColorRect" parent="."]
